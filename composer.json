@@ -1,0 +1,22 @@
+{
+	"name": "olicek/rabbitmq",
+	"description": "Klient pro Rabbit MQ s integraci do Nette.",
+	"keywords": ["nette"],
+	"type": "project",
+	"license": ["GPL-3.0"],
+	"require": {
+		"php": ">= 7.1",
+		"nette/di": "^2.4",
+		"php-amqplib/php-amqplib": "^2.7"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "7.0.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Oli\\RabbitMq\\": [
+				"src/"
+			]
+		}
+	}
+}
