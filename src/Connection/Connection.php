@@ -57,13 +57,21 @@ final class Connection
     return $this->channels[$channelId] = $this->connection->channel($channelId);
   }
 
-  public function __destruct()
+  /**
+   * Close connection
+   */
+  public function close(): void
   {
     foreach($this->channels as $channel)
     {
       $channel->close();
     }
     $this->connection->close();
+  }
+
+  public function __destruct()
+  {
+    $this->close();
   }
 
 }
